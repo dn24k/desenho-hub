@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Introdução ao Canvas com Java Script</title>
+    <meta charset="UTF-8">
+    <!-- Início do Java Script -->
+    <script>
+      function draw(){
+        var canvas = document.getElementById('meuCanvas');
+        if (canvas.getContext){
+          var cntxt = canvas.getContext('2d');
+           cntxt.fillStyle = "rgb(200, 120, 100)";
+           cntxt.fillRect (25, 30, 55, 50);
+           cntxt.strokeRect(25, 30, 55, 50);
+           cntxt.clearRect(25, 30, 45, 40);
+           cntxt.fillStyle = "rgba(25, 120, 200, 0.5)";
+           cntxt.fillRect (45, 40, 55, 50);
+           cntxt.strokeRect(65, 50, 55, 50);
+        }
+      }
+    </script>
+    <!-- Fim do Java Script -->
+      
+      
+  </head>
+  <body onload="draw();">
+    <canvas id="meuCanvas" style="border:1px solid #000000;"></canvas>
+  </body>
+</html>
